@@ -38,9 +38,9 @@ while( 1 == 1):
     elif (key == 4):
         if(qlsv.soLuongSinhVien() > 0):
             print("\n4. Tim kiem sinh vien theo ten")
-            print("Nhap ten")
+            print("Nhap ten de tim kiem")
             name = input()
-            qlsv.searchByName(name)
+            searchResult = qlsv.findByName(name)
         else:
             print("Khong co sinh vien nao trong danh sach")
     elif (key == 5):  

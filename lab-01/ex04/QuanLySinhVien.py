@@ -23,8 +23,8 @@ class QuanLySinhVien:
         sv = SinhVien(svId, name, sex, major, diemTB)
         self.XepLoaiHocLuc(sv)
         self.list_sinhvien.append(sv)
-    def updateSinhVien(self):
-        sv:SinhVien = self.findByIF(id)
+    def updateSinhVien(self, id):
+        sv:SinhVien = self.findByID(id)
         for sv in self.list_sinhvien:
             if (sv != None):
                 name = input("Nhap ten sinh vien: ") 
@@ -51,7 +51,7 @@ class QuanLySinhVien:
                 if (sv._id == ID):
                     searchResult = sv
         return searchResult
-    def findByName(self, name):
+    def findByName(self, keyword):
         listSV = []
         if (self.soLuongSinhVien() > 0):
             for sv in self.list_sinhvien:
